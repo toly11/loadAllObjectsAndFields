@@ -1,0 +1,38 @@
+{
+    "name": "Salesforce - Load All Objects And Fields",
+    "description": "Load all objects and fields in salesforce objects manager",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.salesforce.com/*",
+                "https://*.force.com/*",
+                "https://*.cloudforce.com/*",
+                "https://*.visualforce.com/*"
+            ],
+            "js": [
+                "index.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "extension_ids": [],
+            "matches": [
+                "https://*.salesforce.com/*",
+                "https://*.force.com/*",
+                "https://*.cloudforce.com/*",
+                "https://*.visualforce.com/*"
+            ],
+            "resources": [
+                "loadAllObjectsAndFields.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
